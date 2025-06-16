@@ -1,0 +1,246 @@
+body {
+    font-family: sans-serif !important;
+}
+
+.nav_bar {
+    width: 100% !important;
+    height: 100vh;
+}
+
+.das_count {
+    width: 90%;
+    height: 90px;
+    margin-top: 45px;
+    margin-left: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+
+}
+
+.das_1 {
+    background-color: #00CAC6B2;
+    opacity: 70%;
+    width: 240px;
+    height: 90px;
+    border-radius: 8px;
+    margin-left: 0px;
+
+
+}
+
+.das_2 {
+    background-color: #F27867B2;
+    opacity: 70%;
+    width: 240px;
+    height: 90px;
+    border-radius: 8px;
+
+
+}
+
+.das_3 {
+    background-color: #7888F2B2;
+    opacity: 70%;
+    width: 240px;
+    height: 90px;
+    border-radius: 10px;
+
+
+}
+
+.das_4 {
+    background-color: #D4A867B2;
+    opacity: 70%;
+    width: 240px;
+    height: 90px;
+    border-radius: 8px;
+
+
+}
+
+.toworrow_ap {
+    background-color: white;
+    width: 90%;
+    height: 250px;
+    margin-top: 100px;
+    margin-left: 55px;
+    border-radius: 8px;
+
+}
+
+.top_nav {
+    margin-left: 5px;
+    display: inline-block;
+    background-color: white;
+    width: 99%;
+    height: 80px;
+    margin-top: 1px;
+    border-radius: 8px;
+
+}
+
+
+.top_nav h4 {
+    margin-top: 20px;
+    font-family: sans-serif;
+    height: 20px;
+    display: flex;
+    margin-left: 30px;
+    justify-content: left;
+
+}
+
+.top_nav p {
+    height: 20px;
+    margin-left: 30px;
+
+}
+
+
+/* .home_dash{
+    margin-top: 30px;
+    margin-left: 20px;
+
+} */
+
+
+.breadcrumb-buttons {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 99%;
+    height: 60px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-left: 5px;
+
+
+}
+
+.breadcrumb {
+    margin-left: 30px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+
+.container .breadcrumb-buttons .breadcrumb {
+    content: "\f101";
+
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.fa-angle-double-right:before,
+.fa-angles-right:before {
+    content: "\f101";
+    color: grey;
+    display: block;
+    ;
+}
+
+
+
+
+
+#sidebar
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #343a40;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .menu .item {
+    margin: 15px 0;
+}
+
+.sidebar .menu .item a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .sub-menu {
+    display: none;
+    margin-left: 15px;
+}
+
+.sidebar .sub-menu .sub-item {
+    display: block;
+    padding: 5px 0;
+    color: #ccc;
+}
+
+.sub-btn .dropdown.rotate {
+    transform: rotate(90deg);
+}
+
+/* Hamburger button */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #343a40;
+    z-index: 999;
+}
+
+/* Hide sidebar on small screens */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .nav_bar {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .das_count {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        align-items: center;
+    }
+
+    .das_1,
+    .das_2,
+    .das_3,
+    .das_4 {
+        width: 90%;
+    }
+
+    .top_nav,
+    .breadcrumb-buttons,
+    .toworrow_ap {
+        width: 95%;
+        margin: 10px auto;
+    }
+}

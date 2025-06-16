@@ -1,0 +1,223 @@
+body {
+  font-family: Arial, sans-serif;
+
+  background-color: whitesmoke !important;
+}
+/* top nav*/
+.container {
+  width: 100%;
+  height: 98vh;
+  padding: 0%;
+  margin: 5px 5px 0px 10px;
+
+
+}
+
+
+.top_nav {
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 20px;
+  height: 80px;
+  margin-top: 5px;
+
+}
+
+.top_nav h4 {
+  font-size: 20px;
+  color: #222;
+  margin: 0 0 5px;
+  padding-top: 5px;
+}
+
+.top_nav p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.breadcrumb-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-top: 5px;
+  width: 100%;
+  height: 60px;
+
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500; 
+  padding-left: 10px;
+}
+
+.breadcrumb i {
+  margin: 0 5px;
+  color: #888;
+  margin-top: 6px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline-emailsend {
+  border: 1px solid #ccc;
+ 
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
+.btn-outline-mailinglist {
+  border: 1px solid #ccc;
+  background-color: #189DE9;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
+
+.btn-outline:hover, {
+  background-color: #f0f0f0;
+}
+
+.btn-primary {
+
+ 
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-primary:hover ,.btn-outline-emailsend:hover{
+  background-color: #189DE9;
+}
+
+.breadcrumb {
+  color: grey;
+  padding-left: 12px;
+}
+.breadcrumb{
+  margin: 10px;
+}
+
+/* table with filter */
+.controls {
+  margin-bottom: 15px;
+  margin-top: 9px;
+  display: flex;
+  justify-content: end;
+}
+.controls input, .controls select {
+  padding: 8px;
+  margin-right: 10px;
+}
+table {
+  margin-left: 20px;
+  width: 80%;
+  border-collapse: collapse;
+  background-color: white;
+}
+th, td {
+  padding: 5px 5px;
+  
+  text-align: left;
+}
+th {
+  background-color: #f0f0f0;
+}
+.actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.edit { background-color: transparent; color: black; }
+.view { background-color: transparent; color: black; }
+.delete { background-color: transparent; color: rgb(0, 0, 0); }
+/* page nag*/
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  gap: 6px;
+  margin-left: 250px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+/*3 dot */
+.actions {
+  position: relative;
+}
+
+.dots-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content { 
+  display: none;
+  position: absolute;
+  top: 25px;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content button {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f100;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+

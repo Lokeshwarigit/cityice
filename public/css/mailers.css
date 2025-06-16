@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: blue;
+}
+
+.container {
+  width: 100vh;
+  height: auto;
+
+}
+.top_nav {
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 20px;
+  height: 65px;
+  margin-top: 5px;
+
+}
+
+.top_nav h4 {
+  font-size: 20px;
+  color: #222;
+  margin: 0 0 5px;
+  padding-top: 5px;
+}
+
+.top_nav p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.breadcrumb-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-top: 5px;
+  width: 100%;
+  height: 65px;
+
+}
+
+.breadcrumb a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.breadcrumb i {
+  margin: 0 5px;
+  color: #888;
+  margin-top: 6px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+.breadcrumb {
+  color: grey;
+  padding-left: 12px;
+}
+.breadcrumb{
+  margin: 10px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  margin-left: 650px;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.search-box {
+  position: relative;
+
+
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 35px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9fc;
+  color: #333;
+  border: 1px solid black;
+  width: 180px;
+}
+
+input::placeholder {
+  padding-left: 20px;
+
+}
+
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.fa-magnifying-glass:before,
+.fa-search:before {
+  content: "\f002";
+  display: block;
+  margin-bottom: 25px;
+}
+
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-dropdown label {
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-dropdown select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9fc;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+.filter-dropdown label {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+
+
+.container_two {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  
+  margin: auto;
+
+}
+
+h4 {
+  margin-bottom: 10px;
+}
+
+.checkbox-container {
+  background-color: #f8f8f8;
+  padding: 20px 30px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 40px;
+
+  width: 400px;
+  height: 210px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #bbb;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3f51b5;
+  border-color: #3f51b5;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+}
+
+.form-section {
+  clear: both;
+  margin-top: 30px;
+}
+
+input[type="text"] {
+
+  display: block;
+  padding: 8px;
+  margin-top: 5px;
+
+}
+
+input[type="text"]:focus {
+  outline: none;
+ 
+}
+.form-section input[type="text"] {
+
+  display: block;
+  /* padding: 8px; */
+  margin-top: 5px; 
+  border: none;
+  border-bottom: 1px solid black;
+
+}
+
+.required {
+  color: red;
+}
+
+.btn-add {
+  float: right;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: -35px;
+  width: 80px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+}

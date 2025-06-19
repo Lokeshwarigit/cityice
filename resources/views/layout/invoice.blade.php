@@ -11,12 +11,12 @@
     <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-
     <style>
         body {
             background-color: whitesmoke;
             font-family: 'Segoe UI', sans-serif;
             display: flex;
+            flex-direction: row;
         }
 
         .containers {
@@ -60,12 +60,12 @@
         .search-box {
             display: flex;
             align-items: center;
-            background-color: white;
-            border: 1px solid #ced4da;
-            padding: 6px 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
             border-radius: 6px;
+            padding: 0.4rem 0.8rem;
+            min-width: 150px;
             margin-left: auto;
-            margin-right: 10px;
         }
 
         .search-box input {
@@ -78,10 +78,10 @@
 
         .filter-row {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+            margin: 20px 0;
         }
 
         #modal_calendra {
@@ -108,55 +108,64 @@
             background-color: white;
         }
 
-        /* 🔻 FULL MEDIA QUERY RESPONSIVENESS */
-        @media (max-width: 576px) {
-            body {
-                flex-direction: column;
-            }
+        .table-responsive {
+            overflow-x: auto;
+        }
 
-            .containers {
-                padding: 10px;
-            }
+        .filter-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* flex-wrap: wrap; */
+            gap: 10px;
+        }
 
-            .top_nav,
-            .breadcrumb-buttons,
-            .filter-row,
-            .search-box,
-            .dropdown,
-            #showEntries,
-            .d-flex.align-items-center.gap-2 {
-                width: 100% !important;
+        .toolbar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+
+        /* 🔻 Mobile: Force column direction
+        @media (max-width: 768px) {
+            .toolbar {
                 flex-direction: column !important;
-                align-items: stretch !important;
                 gap: 10px;
-                text-align: center;
-            }
-
-            .search-box input,
-            #invoiceTable {
-                width: 100% !important;
-                font-size: 12px;
+                align-items: stretch;
             }
 
             .search-box {
-                justify-content: center;
+                /* width: 100%; */
             }
 
-            .btn.btn-outline-secondary.dropdown-toggle {
+            /* .toolbar .dropdown,
+            .toolbar select {
                 width: 100%;
-            }
+            } */ */
 
-            .table-responsive {
-                overflow-x: auto;
-            }
+            /* ✅ Mobile media courier fix */
+            @media (max-width: 768px) {
+                .filter-row {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
 
-            .dataTables_wrapper .dataTables_paginate {
-                text-align: center;
-            }
+                .toolbar {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 10px;
+                }
 
-            .breadcrumb-text {
-                justify-content: center;
-                flex-wrap: wrap;
+                .search-box {
+                    /* width: 100%; */
+                }
+
+                .toolbar select,
+                .toolbar .dropdown {
+                    width: 100%;
+                }
             }
         }
     </style>
@@ -335,4 +344,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -42,4 +42,6 @@ class AppointmentController extends Controller
         $appointments = Appointment::all(); // Fetch all records from the database
         return view('invoice.issues', compact('appointments'));
     }
+    
 }
+

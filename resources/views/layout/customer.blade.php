@@ -20,11 +20,11 @@
 
     <!-- Custom Styling -->
     <style>
-        html,
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            font-family: sans-serif !important;
+           background-color: whitesmoke;
         }
 
         .containers {
@@ -33,6 +33,7 @@
 
         .table-responsive {
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .modal-content {
@@ -47,17 +48,6 @@
 
         .form-label {
             color: #495057;
-        }
-
-        /* new */
-        body {
-            font-family: sans-serif !important;
-            margin: 20px;
-            background-color: rgb(207, 205, 205) !important;
-        }
-
-        .containers {
-            width: 100%;
         }
 
         .header {
@@ -79,7 +69,6 @@
             align-items: center;
             margin-top: 5px;
             width: 99%;
-
         }
 
         .top_nav h4 {
@@ -91,9 +80,9 @@
             justify-content: space-between;
             margin-left: 8px;
             background-color: white;
-            height: 50px;
+            height: 60px;
             border-radius: 8px;
-            margin-top: 3px;
+            margin-top: 8px;
             align-items: center;
         }
 
@@ -125,22 +114,16 @@
         .btn-primary {
             height: 40px;
             margin-right: 10px;
-
         }
 
         .btn-primary p {
-
             text-align: center;
-            font-size: 14px;
         }
 
         .dt-search {
             display: none;
         }
 
-        /* .table responsive shadow-sm {
-     box-shadow: var(--bs-box-shadow-sm) !important;
- } */
         div.dt-container div.dt-layout-row {
             display: flex;
             justify-content: space-between;
@@ -156,17 +139,6 @@
         th,
         td {
             border: none !important;
-        }
-
-        body {
-            font-family: sans-serif !important;
-            /* margin: 20px; */
-            background-color: whitesmoke !important;
-        }
-
-        .table-responsive {
-            /* overflow-x: auto; */
-            -webkit-overflow-scrolling: touch;
         }
 
         div.dt-container {
@@ -185,73 +157,77 @@
 
         .dataTables_wrapper .dataTables_filter {
             display: none;
-            /* Hide default search box */
         }
 
         .search-wrapper {
-            border: 1px solid black;
-            background-color: white;
             display: flex;
             align-items: center;
-            gap: 10px;
+            background: #f1f1f1;
+            padding: 6px 12px;
+            border-radius: 8px;
+            width: 250px;
+            max-width: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid grey;
+            background-color: white;
         }
 
-
-        /* Media Query for tablets and below */
-
-
-        /* Media Query for mobile devices */
-        @media (max-width: 576px) {
-
-            .breadcrumb-buttons,
-            .top_nav {
-                margin-left: 0px;
-                margin-top: 5px;
-            }
+        .search-icon {
+            color: #888;
+            font-size: 16px;
         }
 
-        @media (max-width: 576px) {
-            .breadcrumb-buttons {
-                display: flex;
-                justify-content: space-between;
-                margin-left: 8px;
-                background-color: white;
-                height: 50px;
-                border-radius: 8px;
-                margin-top: 3px;
-                align-items: normal;
-            }
-
-            .mailing_container {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 0px;
-            }
-
-            .mailing_container h4 {
-                font-size: 16px;
-                margin-left: 5px;
-            }
+        .search-input {
+            border: none;
+            outline: none;
+            background: transparent;
+            margin-left: 10px;
+            width: 100%;
+            font-size: 16px;
         }
 
+        /* NEW: Media Courier Row (Home Dashboard + New Customer) */
+        .media-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+
+        .media-header .page-title {
+            font-size: 20px;
+            margin: 0;
+            color: #333;
+        }
+
+        .media-header .new-customer-btn {
+            font-size: 14px;
+            height: 40px;
+            padding: 8px 16px;
+            margin-top: 10px;
+            white-space: nowrap;
+        }
+
+        /* Media Queries */
         @media (max-width: 992px) {
             .breadcrumb-buttons {
                 margin: 2px;
                 margin-top: 5px;
                 height: auto;
                 flex-direction: column;
-                padding: 0.5rem;
             }
 
             .top_nav {
                 flex-direction: column;
                 align-items: flex-start;
                 height: auto;
-                padding: 10px;
-                margin-left: 0px;
                 padding: 0px;
+                margin-left: 0px;
             }
 
             .top_nav h4 {
@@ -264,7 +240,6 @@
             }
 
             .btn-primary {
-                width: 100%;
                 margin: 10px 0 0 0;
             }
 
@@ -275,10 +250,7 @@
             }
 
             .filter-row .search-wrapper,
-            .filter-row .form-select {
-                width: 100%;
-            }
-
+            .filter-row .form-select,
             .dropdown {
                 width: 100%;
             }
@@ -320,6 +292,8 @@
 
             .breadcrumb-buttons,
             .top_nav {
+                margin-left: 0px;
+                margin-top: 5px;
                 padding: 0.5rem;
             }
 
@@ -329,10 +303,11 @@
 
             .search-wrapper {
                 width: 100%;
+                margin-top: 10px;
             }
 
             .search-input {
-                width: 100%;
+                font-size: 14px;
             }
 
             .form-label {
@@ -361,39 +336,20 @@
                 margin-left: 40px;
             }
 
-            /* Desktop style (already good) */
-
-
-            /* Clean and correct mobile styles for search box and filter row */
-            @media (max-width: 576px) {
-                .filter-row {
-                    flex-direction: column !important;
-                    align-items: stretch !important;
-                    gap: 1rem;
-                }
-
-                .search-wrapper {
-                   
-                    align-items: stretch !important;
-                    width: 100% !important;
-                    padding: 0.5rem;
-                }
-
-                .search-wrapper input {
-                    width: 100% !important;
-                }
-
-                #showEntries,
-                .dropdown {
-                    width: 100% !important;
-                }
-
-                .dropdown .btn {
-                    width: 100% !important;
-                }
+            .media-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
 
+            .media-header .new-customer-btn {
+                width: 100%;
+                margin-top: 5px;
+            }
 
+            .media-header .page-title {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -425,7 +381,7 @@
             <div class="d-flex align-items-center gap-3 ms-auto">
                 <div class="search-wrapper">
                     <span class="search-icon"><i class="fas fa-search"></i></span>
-                    <input type="text" placeholder="Search" class="search-input" style="border:none; outline: none ;">
+                    <input type="text" placeholder="Search" class="search-input" />
                 </div>
                 <label for="showEntries">Entries</label>
                 <select id="showEntries" class="form-select w-auto">
@@ -533,24 +489,26 @@
 
     <!-- JS to Handle Table and Form -->
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             const table = $('#customerTable').DataTable({
-                columnDefs: [
-                    { orderable: false, targets: 8 } // Disable ordering on Action column
+                columnDefs: [{
+                        orderable: false,
+                        targets: 8
+                    } // Disable ordering on Action column
                 ]
             });
 
             let editRow = null;
 
             // Clear form and modal title when clicking "New Customer"
-            $('#btnAddNew').on('click', function () {
+            $('#btnAddNew').on('click', function() {
                 editRow = null;
                 $('#customerForm')[0].reset();
                 $('#customerModalLabel').text('New Customer');
             });
 
             // Submit form for add or edit
-            $('#customerForm').on('submit', function (e) {
+            $('#customerForm').on('submit', function(e) {
                 e.preventDefault();
 
                 const formData = new FormData(this);
@@ -593,14 +551,14 @@
             });
 
             // Delete row
-            $('#customerTable tbody').on('click', '.btn-delete', function () {
+            $('#customerTable tbody').on('click', '.btn-delete', function() {
                 if (confirm('Are you sure you want to delete this customer?')) {
                     table.row($(this).closest('tr')).remove().draw(false);
                 }
             });
 
             // View customer details
-            $('#customerTable tbody').on('click', '.btn-view', function () {
+            $('#customerTable tbody').on('click', '.btn-view', function() {
                 const row = table.row($(this).closest('tr')).data();
                 alert(`
 S.No: ${row[0]}
@@ -615,7 +573,7 @@ Document: ${row[7]}
             });
 
             // Edit customer details
-            $('#customerTable tbody').on('click', '.btn-edit', function () {
+            $('#customerTable tbody').on('click', '.btn-edit', function() {
                 editRow = table.row($(this).closest('tr'));
                 const rowData = editRow.data();
 

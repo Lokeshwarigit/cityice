@@ -36,39 +36,209 @@
             right: 0 !important;
         }
 
-        #calendarModal .modal-dialog {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        #calendarModal .modal-content {
+        .modal-content {
             background-color: whitesmoke;
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
             margin: auto;
         }
 
-        #calendarModal .modal-title {
+        .modal-title {
             font-weight: 600;
             font-size: 20px;
             color: #333;
         }
 
-        #calendarModal .form-label {
+        .form-label {
             font-weight: 500;
         }
 
-        #calendarModal .btn-primary {
+        .btn-primary {
             background-color: #4A90E2;
             border: none;
         }
 
-        #calendarModal .btn-primary:hover {
+        .btn-primary:hover {
             background-color: #357ABD;
+        }
+
+        .modal-content {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .search-wrapper {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 14px;
+            z-index: 1;
+        }
+
+        /* ===== Responsive for Tablets (max-width: 768px) ===== */
+        @media (max-width: 768px) {
+
+            .header,
+            .breadcrumb-buttons,
+            .filter-row {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 10px;
+                padding: 10px !important;
+            }
+
+            .breadcrumb {
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 0.95rem;
+            }
+
+            .search-wrapper {
+                width: 100%;
+            }
+
+            .search-wrapper .search-input {
+                width: 100%;
+                padding-left: 35px;
+                height: 36px;
+                font-size: 0.95rem;
+            }
+
+            .table-wrapper {
+                overflow-x: auto;
+            }
+
+            table.dataTable {
+                width: 100% !important;
+                display: block;
+            }
+
+            .dt-buttons {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .modal-content {
+                padding: 15px;
+            }
+
+            .modal-title,
+            .form-label,
+            .form-control,
+            .btn {
+                font-size: 0.95rem;
+            }
+
+            .form-control {
+                height: 38px;
+            }
+        }
+
+        /* ===== Responsive for Mobiles (max-width: 576px) ===== */
+        @media (max-width: 576px) {
+            .header h4 {
+                font-size: 1.2rem;
+            }
+
+            .breadcrumb {
+                font-size: 0.85rem;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            .search-wrapper {
+                width: 100%;
+            }
+
+            .search-wrapper .search-input {
+                width: 100%;
+                padding-left: 35px;
+                font-size: 0.9rem;
+                height: 34px;
+            }
+
+            .search-wrapper .search-icon {
+                left: 10px;
+                font-size: 0.9rem;
+            }
+
+            .filter-row label,
+            select.form-select {
+                font-size: 0.9rem;
+                width: 100%;
+            }
+
+            .dropdown-menu {
+                width: 100%;
+            }
+
+            .dropdown-menu a {
+                font-size: 0.9rem;
+            }
+
+            .table-wrapper {
+                overflow-x: auto;
+            }
+
+            table.dataTable {
+                display: block;
+                width: 100% !important;
+            }
+
+            .modal-content {
+                padding: 10px;
+            }
+
+            .modal-title {
+                font-size: 1rem;
+            }
+
+            .form-label,
+            .form-control,
+            .btn {
+                font-size: 0.85rem;
+            }
+
+            .form-control {
+                height: 34px;
+            }
+
+            .btn-close {
+                font-size: 0.9rem;
+            }
+
+            .dt-buttons {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            @media (max-width: 768px) {
+                .modal-dialog {
+                    max-width: 95% !important;
+                    margin: 1rem auto;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .modal-dialog {
+                    max-width: 100% !important;
+                    margin: 1rem auto;
+                }
+            }
         }
     </style>
 </head>
@@ -77,23 +247,13 @@
     @include('layout.sidebarnew')
 
     <div class="header-container w-100">
-        <!-- Header Section -->
         <div class="header d-flex justify-content-between align-items-center p-3">
             <h4 class="ms-2 mb-3">History</h4>
-            <div class="profile-card d-flex align-items-center">
-                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Image" width="50"
-                    class="rounded-circle me-2">
-                <div>
-                    <div class="profile-name">Dinesh Kumar G.</div>
-                    <div class="profile-email">dineshkumardextra@gmail.com</div>
-                </div>
-            </div>
         </div>
 
-        <!-- Breadcrumb and Buttons -->
         <div class="breadcrumb-buttons d-flex justify-content-between align-items-center px-3">
             <div class="breadcrumb ms-2">
-                <a href="{{ route('dashboard') }}">Home </a>
+                <a href="{{ route('dashboard') }}">Home</a>
                 <i class="fa-solid fa-angles-right"></i> Dashboard
             </div>
             <div>
@@ -106,13 +266,13 @@
             </div>
         </div>
 
-        <!-- Filter and Export -->
         <div class="filter-row d-flex justify-content-between align-items-center p-3">
             <div class="d-flex align-items-center gap-3 ms-auto">
                 <div class="search-wrapper">
                     <span class="search-icon"><i class="fas fa-search"></i></span>
                     <input type="text" placeholder="Search" class="search-input" />
                 </div>
+
                 <label for="showEntries">Entries</label>
                 <select id="showEntries" class="form-select w-auto">
                     <option value="All">All</option>
@@ -138,7 +298,7 @@
             </div>
         </div>
 
-        <!-- Table Section -->
+        <!-- Table -->
         <div class="table-wrapper pb-4">
             <table id="myTable" class="table table-striped display" style="width:100%">
                 <thead>
@@ -159,9 +319,81 @@
         </div>
     </div>
 
-    {{-- @include('appointments.partials.appointment_modal') --}}
+    <!-- Calendar Modal -->
+    <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="calendarModalLabel"> Filter by Date</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="calendarFilterForm">
+                        <div class="mb-3">
+                            <label for="startDate" class="form-label">Start Date</label>
+                            <input type="date" class="form-control" id="startDate" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="endDate" class="form-label">End Date</label>
+                            <input type="date" class="form-control" id="endDate" required />
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary">Apply Filter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- JS Logic -->
+    <!-- New Appointment Modal -->
+    <div class="modal fade" id="myform" tabindex="-1" aria-labelledby="newAppointmentLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="newAppointmentLabel"> New Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="{{ route('appointments.store') }}">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="customer_name" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="customer_name" name="customer_name"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact_no" class="form-label">Contact No</label>
+                            <input type="tel" class="form-control" id="contact_no" name="contact_no" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="preferred_date" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="preferred_date" name="preferred_date"
+                                required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="preferred_time" class="form-label">Preferred Time</label>
+                            <input type="time" class="form-control" id="preferred_time" name="preferred_time"
+                                required />
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-success">Submit Appointment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
         $(document).ready(function() {
             const table = $('#myTable').DataTable({
@@ -194,8 +426,7 @@
                         data: null,
                         render: function(data, type, row) {
                             return `<button class='btn btn-sm btn-info' onclick='viewAppointment(${row.id})'>
-                                        <i class="fa fa-eye"></i>
-                                    </button>`;
+                                <i class="fa fa-eye"></i></button>`;
                         },
                         orderable: false
                     }
@@ -235,8 +466,10 @@
             });
 
             $('#modal_calendra').on('click', function() {
-                new bootstrap.Modal(document.getElementById('calendarModal')).show();
+                const modal = new bootstrap.Modal(document.getElementById('calendarModal'));
+                modal.show();
             });
+            F
 
             $('#calendarFilterForm').on('submit', function(e) {
                 e.preventDefault();
@@ -255,7 +488,6 @@
 
         function viewAppointment(id) {
             alert('View clicked for ID: ' + id);
-            // Load modal or redirect to view page here
         }
     </script>
 </body>
